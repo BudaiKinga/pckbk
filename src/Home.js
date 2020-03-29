@@ -1,10 +1,12 @@
 import React from 'react';
+import Houses from './Houses';
 
 function home() {
     return (
-        <dev>
+        <div>
             <p>Itt lesz a lakasok listaja</p>
-        </dev>
+            <Houses />
+        </div>
     );
 }
 export default home;

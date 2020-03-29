@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import Houses from './Houses';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import NavBar from './NavBar';
 import ujHaz from './UjHaz';
 import szures from './Szures';
