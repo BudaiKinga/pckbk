@@ -1,12 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Houses from './Houses';
 
-function home() {
+function Home() {
+
+    const [response, setresponse] = useState('');
+
+    const listHouses = () => {
+        var xhr = new XMLHttpRequest()
+
+        xhr.addEventListener('load', () => {
+            setresponse(xhr.responseText)
+        })
+
+        xhr.open('GET', 'http://localhost:8080/kbk/HouseList')
+        xhr.send()
+    } 
+    listHouses()
+
     return (
         <div>
-            <p>Itt lesz a lakasok listaja</p>
+            <p>{response}</p>
             <Houses />
         </div>
     );
 }
-export default home;
+export default Home;

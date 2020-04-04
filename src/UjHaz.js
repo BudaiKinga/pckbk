@@ -1,26 +1,19 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 function UjHaz() {
-    const [hazUrl, setHazUrl] = useState('');
+    const [hazUrl, setHazUrl] = useState('https://www.imobiliare.ro/vanzare-case-vile/cluj-napoca/marasti/casa-de-vanzare-4-camere-X57Q11058?lista=5614675');
     const updateHazUrl = e => {
         setHazUrl(e.target.value);
     };
 
     const magic = () => {
-        console.log(hazUrl);
-        
-        
         var xhr = new XMLHttpRequest()
 
-        // get a callback when the server responds
         xhr.addEventListener('load', () => {
-        // update the state of the component with the result here
             console.log(xhr.responseText)
         })
-        // open the request with the verb and the url
-        xhr.open('GET', 'http://localhost:8080/kbk/')
-        // send the request
+
+        xhr.open('GET', 'http://localhost:8080/kbk/NewHouse?houseUrl=' + hazUrl)
         xhr.send()
     };
 

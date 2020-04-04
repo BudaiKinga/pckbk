@@ -1,6 +1,6 @@
 import React from 'react';
 
-function szures() {
+function Szures() {
     return (
         <div>
             <p>Szuresek</p>
@@ -8,4 +8,4 @@ function szures() {
     );
 }
 
-export default szures;
+export default Szures;
